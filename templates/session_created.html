@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Created</title>
+</head>
+<body>
+    <h1>Session Created Successfully</h1>
+    <p>Your session has been created with user ID: <strong>{{ user_id }}</strong> on port: <strong>{{ port }}</strong></p>
+
+    <form action="/submit_username" method="POST">
+        <label for="username">Enter your Username:</label>
+        <input type="text" id="username" name="username" required>
+        <input type="hidden" name="user_id" value="{{ user_id }}">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
